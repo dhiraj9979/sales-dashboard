@@ -84,6 +84,9 @@ def update_graph(start_date, end_date):
         print(f'Error in update_graph: {str(e)}')
         raise
 
+# Expose the Flask server for Gunicorn
+server = app.server
+
 # Run the app
 if __name__ == '__main__':
-    app.run_server(debug=True, host='127.0.0.1', port=8050)
+    app.run_server(debug=True, host='0.0.0.0', port=8050)
