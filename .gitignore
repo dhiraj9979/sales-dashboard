@@ -1,5 +1,4 @@
 venv/
 *.pyc
 __pycache__/
-sales_data.xls
 .env
